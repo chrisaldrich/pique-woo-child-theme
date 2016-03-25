@@ -1,0 +1,148 @@
+/*
+Theme Name:     Pique Woo Child
+Theme URI:      https://github.com/chrisaldrich/pique-woo-child-theme
+Description:    Pique theme with support for WooCommerce integration.
+Author:         Automattic: Ola Laczek, Kathryn Presner; Chris Aldrich
+Template:       pique-wpcom
+Version:        1.0.0
+License:        GPLv2 or later
+License URI:    http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, gray, red, white, yellow, dark, light, one-column, two-columns, right-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+(optional values you can add: Theme URI, Author URI, Text Domain)
+*/
+
+
+
+/* Display sidebar on shop archive pages */
+.woocommerce .site-content {
+	padding: 20px;
+}
+
+@media (min-width: 1024px) {
+	.archive.pique-sidebar .content-area {
+		float: right;
+		padding-left: 40px;
+		padding-right: 0;
+	}
+
+	.woocommerce .site-content {
+		margin-bottom: 20px;
+		margin-top: 40px;
+	}
+
+	.archive .site-content .content-area {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 20px;
+		padding-right: 20px;
+		width: 66%;
+	}
+}
+
+/* Remove background behind product details on archive pages */
+.woocommerce ul.products .pique-panel,
+.woocommerce ul.products .pique-panel:nth-of-type(even) {
+	background: none;
+}
+
+/* Adjust product width, to display products in 3 columns, instead of default 4 */
+@media screen and (min-width:768px) {
+	.woocommerce ul.products li.product,
+	.woocommerce-page ul.products li.product {
+		text-align: center;
+		width: 30.8%;
+	}
+}
+
+/* Center product details on shop archive pages */
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product,
+.woocommerce ul.products li.product h3,
+.woocommerce ul.products li.product .star-rating {
+	text-align: center;
+}
+
+.woocommerce ul.products li.product .star-rating {
+	margin: 0 auto;
+}
+
+/* Style the SALE badge */
+.woocommerce span.onsale {
+	padding: 0;
+}
+
+/* Style WooCommerce buttons to match the theme styling */
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+	background-color: #83b6cc;
+	border: 2px solid transparent;
+	border-radius: 2em;
+	color: #eff6f9;
+	display: inline-block;
+	font-family: Karla, Arial, sans-serif;
+	font-size: 15.2px;
+	font-size: 0.95rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	line-height: 1;
+	padding: 1em 3em;
+	text-shadow: none;
+	text-transform: uppercase;
+	transition: background-color 0.125s ease-in;
+	-webkit-appearance: none;
+}
+
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover {
+	background-color: transparent;
+	border-color: #83b6cc;
+	color: #83b6cc;
+}
+@media screen and (max-width: 768px) {
+	.woocommerce #respond input#submit,
+	.woocommerce a.button,
+	.woocommerce button.button,
+	.woocommerce input.button {
+		padding: 1em;
+	}
+
+	button,
+	.archive .read-more a,
+	.blog .read-more a,
+	.search-results .read-more a,
+	.button, input[type='button'],
+	input[type='reset'],
+	input[type='submit'] {
+		width: auto;
+	}
+}
+
+.woocommerce button.button.alt,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce input.button.alt {
+	background-color: #a46497;
+}
+
+.woocommerce button.button.alt:hover,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce input.button.alt:hover {
+	background-color: transparent;
+	border-color: #a46497;
+	color: #a46497;
+}
+
+/* Make inputs higher */
+.woocommerce-cart table.cart td.actions .coupon .input-text {
+	padding: 1em;
+}
+
+.woocommerce .quantity .qty {
+	padding: 0.5em;
+}
